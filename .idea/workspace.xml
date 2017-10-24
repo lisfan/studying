@@ -2,7 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="692bb090-eafb-446b-99d0-c48829743136" name="Default" comment="@">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/full/class-a.js" afterPath="$PROJECT_DIR$/full/class-a.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/full/class-b-extends-a.js" afterPath="$PROJECT_DIR$/full/class-b-extends-a.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/ClassA.html" afterPath="$PROJECT_DIR$/out/ClassA.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/ClassBExtendsClassA.html" afterPath="$PROJECT_DIR$/out/ClassBExtendsClassA.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/ClassPrototypeA.html" afterPath="$PROJECT_DIR$/out/ClassPrototypeA.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/Event.html" afterPath="$PROJECT_DIR$/out/Event.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/ExternalString.html" afterPath="$PROJECT_DIR$/out/ExternalString.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/Implements.html" afterPath="$PROJECT_DIR$/out/Implements.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/Interface.html" afterPath="$PROJECT_DIR$/out/Interface.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/NamespaceA.html" afterPath="$PROJECT_DIR$/out/NamespaceA.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/NamespaceA_.html" afterPath="$PROJECT_DIR$/out/NamespaceA_.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/ParamTag.html" afterPath="$PROJECT_DIR$/out/ParamTag.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/external-String.html" afterPath="$PROJECT_DIR$/out/external-String.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/global.html" afterPath="$PROJECT_DIR$/out/global.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/index.html" afterPath="$PROJECT_DIR$/out/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/module-AMDModule.html" afterPath="$PROJECT_DIR$/out/module-AMDModule.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/module-CommonJSModule.html" afterPath="$PROJECT_DIR$/out/module-CommonJSModule.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/module-ESModule.html" afterPath="$PROJECT_DIR$/out/module-ESModule.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/tutorial-tutorials-child-1.html" afterPath="$PROJECT_DIR$/out/tutorial-tutorials-child-1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/tutorial-tutorials-child-2.html" afterPath="$PROJECT_DIR$/out/tutorial-tutorials-child-2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/tutorial-tutorials-parent-1.html" afterPath="$PROJECT_DIR$/out/tutorial-tutorials-parent-1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/tutorial-tutorials-parent-2.html" afterPath="$PROJECT_DIR$/out/tutorial-tutorials-parent-2.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -56,11 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="class-a.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="class-a.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/full/class-a.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="535">
-              <caret line="29" column="1" lean-forward="false" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -79,8 +101,8 @@
       <file leaf-file-name="class-b-extends-a.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/full/class-b-extends-a.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="32" />
+            <state relative-caret-position="480">
+              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -166,6 +188,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="mixin-mixes.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/full/mixin-mixes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="31" column="16" lean-forward="true" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -189,6 +221,8 @@
       <find>static</find>
       <find>this</find>
       <find>throws</find>
+      <find>@name</find>
+      <find>mix</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -227,14 +261,15 @@
         <option value="$PROJECT_DIR$/full/es-module.js" />
         <option value="$PROJECT_DIR$/full/interface.js" />
         <option value="$PROJECT_DIR$/full/implements.js" />
-        <option value="$PROJECT_DIR$/full/class-b-extends-a.js" />
         <option value="$PROJECT_DIR$/conf.json" />
         <option value="$PROJECT_DIR$/full/global.js" />
         <option value="$PROJECT_DIR$/full/class-prototype.js" />
         <option value="$PROJECT_DIR$/full/namespace-a-variation.js" />
         <option value="$PROJECT_DIR$/full/namespace-a.js" />
         <option value="$PROJECT_DIR$/full/param-tag.js" />
+        <option value="$PROJECT_DIR$/full/class-b-extends-a.js" />
         <option value="$PROJECT_DIR$/full/class-a.js" />
+        <option value="$PROJECT_DIR$/full/mixin-mixes.js" />
       </list>
     </option>
   </component>
@@ -331,6 +366,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="692bb090-eafb-446b-99d0-c48829743136" name="Default" comment="" />
@@ -343,12 +381,12 @@
       <workItem from="1508490583988" duration="18125000" />
       <workItem from="1508641869909" duration="15016000" />
       <workItem from="1508678644280" duration="25477000" />
-      <workItem from="1508827823721" duration="3877000" />
+      <workItem from="1508827823721" duration="4794000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67272000" />
+    <option name="totallyTimeSpent" value="68189000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="0" />
@@ -357,6 +395,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890856" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -368,7 +407,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -383,14 +421,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tutorials/tutorials-child-1.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tutorials/tutorials-child-2.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -470,6 +500,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
           <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -486,6 +517,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
           <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -606,6 +638,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -629,14 +662,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/full/class-b-extends-a.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -689,10 +714,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/full/class-b-extends-a.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/full/class-a.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="29" column="1" lean-forward="false" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/full/mixin-mixes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="31" column="16" lean-forward="true" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
           <folding />
         </state>
       </provider>

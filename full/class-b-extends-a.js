@@ -16,6 +16,14 @@ export class ClassBExtendsClassA extends ClassA {
   inheritDocMethod() {
 
   }
+
+  /**
+   * 铁佣兵佣兵
+   * @override
+   */
+  overrideMethod() {
+
+  }
 }
 
 
