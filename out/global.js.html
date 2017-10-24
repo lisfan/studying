@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Mixin: mixinObj</title>
+    <title>JSDoc: Source: global.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,275 +17,88 @@
 
 <div id="main">
 
-    <h1 class="page-title">Mixin: mixinObj</h1>
-
-    
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>mixinObj</h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">这是一个使用 `@mixin` 标记的混和定义对象</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mixin-mixes.js.html">mixin-mixes.js</a>, <a href="mixin-mixes.js.html#line6">line 6</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id=".off"><span class="type-signature">(static) </span>off<span class="signature">()</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    off方法
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mixin-mixes.js.html">mixin-mixes.js</a>, <a href="mixin-mixes.js.html#line22">line 22</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id=".on"><span class="type-signature">(static) </span>on<span class="signature">()</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    on方法
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mixin-mixes.js.html">mixin-mixes.js</a>, <a href="mixin-mixes.js.html#line15">line 15</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-    
-
-    
-
-    
-</article>
-
-</section>
+    <h1 class="page-title">Source: global.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @file
+ */
+
+/**
+ * 这是一个使用`var`定义的变量
+ */
+var variable = 10
+
+/**
+ * 这是一个使用`let`定义的变量
+ */
+let letChange = 30
+
+/**
+ * 这是一个使用`const`定义的常量
+ */
+const constant = 20
+
+/**
+ * 这是一个使用 `@default` 标记的当前默认值
+ * @default
+ */
+let defaultValue = 'hello word!'
+
+/**
+ * 这是一个使用 `@default` 标记的自定义默认值
+ * @default parallel word!
+ */
+const parallelDefaultValue = 'hello word!'
+
+/**
+ * 这是一个使用 `@param` 标记引用自定义回调函数作为参数类型
+ * @param {ClassA~callbackDefined} cb - 回调函数
+ */
+function callbackDefinedMethod(cb) {
+}
+
+/**
+ * 这是一个使用 `@callback` 标记自定义的参数类型
+ *
+ * @callback ClassA~callbackDefined
+ * @param {number} paramA
+ * @param {string} paramB
+ */
+
+// /**
+//  * 这是一个使用 `@kind` 标记的模型
+//  * @kind constant
+//  * @module myModule
+//  */
+
+/**
+ * 这是一个使用 `@kind` 定义的常量
+ * @kind constant
+ */
+let kind = {
+  id: 10,
+  name: 'msl'
+}
+
+/**
+ * 这是一个使用 `@property` 定义的字典
+ *
+ * @property {number} id - 序列号
+ * @property {string} name - 名称
+ */
+let property = {
+  id: 10,
+  name: 'msl'
+}</code></pre>
+        </article>
+    </section>
 
 
 

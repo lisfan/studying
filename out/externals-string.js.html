@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Mixin: mixinObj</title>
+    <title>JSDoc: Source: externals-string.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,275 +17,65 @@
 
 <div id="main">
 
-    <h1 class="page-title">Mixin: mixinObj</h1>
-
-    
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>mixinObj</h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">这是一个使用 `@mixin` 标记的混和定义对象</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mixin-mixes.js.html">mixin-mixes.js</a>, <a href="mixin-mixes.js.html#line6">line 6</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id=".off"><span class="type-signature">(static) </span>off<span class="signature">()</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    off方法
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mixin-mixes.js.html">mixin-mixes.js</a>, <a href="mixin-mixes.js.html#line22">line 22</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id=".on"><span class="type-signature">(static) </span>on<span class="signature">()</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    on方法
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mixin-mixes.js.html">mixin-mixes.js</a>, <a href="mixin-mixes.js.html#line15">line 15</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-    
-
-    
-
-    
-</article>
-
-</section>
+    <h1 class="page-title">Source: externals-string.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @file
+ */
+
+/**
+ * 这是一个内置的String对象
+ *
+ * 这是一个使用 `@external` 标记的外部引用虚拟注释
+ * - 同时使用了 `@see` 标记文档链接指向
+ * - 同时使用了 `@link` 标记定义了链接
+ *
+ * @external String
+ * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String|String}
+ */
+
+/**
+ * 这是一个使用 `@function` 标记关联 external:String
+ * 作为String的一个扩展实例方法
+ *
+ * @function external:String#customOutput
+ */
+String.prototype.customOutput = function () {
+}
+
+/**
+ * 这是一个使用 `@memberOf` 标记关联 external:String
+ * 作为String的一个扩展实例方法
+ * 实现方法不同于上一个
+ * - 同时使用了 `@name` 标记为新名称
+ * - 同时使用了 `@instance` 标记为实例成员
+ * - 同时使用了 `@function` 标记为函数
+ *
+ * @memberOf external:String
+ * @name otherCustomOutput
+ * @instance
+ * @function
+ */
+String.prototype.otherCustomOutput = function () {
+}
+
+/**
+ * 这是一个使用 `@extends` 标记关联 external:String
+ * 从String类继承，创建一个新继承类
+ *
+ * @extends external:String
+ */
+class ExternalString extends String {
+}</code></pre>
+        </article>
+    </section>
 
 
 
