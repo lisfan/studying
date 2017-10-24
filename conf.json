@@ -1,0 +1,50 @@
+{
+  "opts": {
+    "template": "node_modules/minami",
+    "readme": "README.md",
+    "encoding": "utf8",
+    "tutorials": "./tutorials",
+    "destination": "./docs",
+    "recurse": true
+  },
+  "tags": {
+    "allowUnknownTags": true,
+    "dictionaries": [
+      "jsdoc"
+    ]
+  },
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": false,
+    "default": {
+      "useLongnameInNav": true,
+      "outputSourceFiles": false,
+      "includeDate": false,
+      "staticFiles": {
+        "include": [
+          "./tutorials/assets"
+        ]
+      }
+    }
+  },
+  "plugins": [
+    "plugins/markdown"
+  ],
+  "markdown": {
+    "hardwrap": true,
+    "idInHeadings": true,
+    "tags": [
+      "description",
+      "param",
+      "property",
+      "returns",
+      "throws",
+      "todo"
+    ],
+    "excludeTags": [
+      "author",
+      "classdesc",
+      "see"
+    ]
+  }
+}

@@ -69,3 +69,20 @@ let property = {
   id: 10,
   name: 'msl'
 }
+
+/**
+ * See {@link ClassA} and [MyClass's foo property]{@link ClassA#publicMethod}.
+ * Also, check out {@link http://www.google.com|Google} and
+ * {@linklain https://github.com GitHub}.
+ */
+function seeMethod() {
+}
+
+/**
+ * @todo
+ * # 我说我的眼里只有你
+ * - 这是一
+ * - 这是二
+ */
+function todoMethod() {
+}

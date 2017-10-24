@@ -5,6 +5,12 @@ const a = {
     "includePattern": ".+\\.js(doc)?$",// 只有以.js和.jsdoc结尾的文件将会被处理
     "excludePattern": "(^|\\/|\\\\)_" /* 任何文件以下划线开始或开始下划线的目录都将被忽略*/
   },
+  "tags": {
+    "allowUnknownTags": true, // 允许未知标签
+    "dictionaries": [     // 采用 JSDoc 标签
+      "jsdoc"
+    ]
+  },
   "templates": {
     "cleverLinks": true, // @link标签呈现在纯文本
     "monospaceLinks": true, // @link标签使用等宽字体
@@ -20,12 +26,7 @@ const a = {
       }
     }
   },
-  "tags": {
-    "allowUnknownTags": true, // 允许未知标签
-    "dictionaries": [     // 采用 JSDoc 标签
-      "jsdoc"
-    ]
-  },
+
   "plugins": [ // 使用插件
     "plugins/markdown"
   ],

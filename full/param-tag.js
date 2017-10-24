@@ -14,7 +14,10 @@ const ParamTag = {
   },
   /**
    * 这是指定了类型的参数注释
-   * @param {string} somebody
+   * @param {string} somebody -
+   * 这里使用到了`markdown`语法
+   * - 谢谢
+   * - 不用谢
    */
   param2: function (somebody) {
   },
