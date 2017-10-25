@@ -3,31 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="692bb090-eafb-446b-99d0-c48829743136" name="Default" comment="@">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf.json" afterPath="$PROJECT_DIR$/conf.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/ClassA.html" afterPath="$PROJECT_DIR$/docs/ClassA.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/ClassBExtendsClassA.html" afterPath="$PROJECT_DIR$/docs/ClassBExtendsClassA.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/ClassPrototypeA.html" afterPath="$PROJECT_DIR$/docs/ClassPrototypeA.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/Event.html" afterPath="$PROJECT_DIR$/docs/Event.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/ExternalString.html" afterPath="$PROJECT_DIR$/docs/ExternalString.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/Implements.html" afterPath="$PROJECT_DIR$/docs/Implements.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/Interface.html" afterPath="$PROJECT_DIR$/docs/Interface.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/NamespaceA.html" afterPath="$PROJECT_DIR$/docs/NamespaceA.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/NamespaceA_.html" afterPath="$PROJECT_DIR$/docs/NamespaceA_.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/ParamTag.html" afterPath="$PROJECT_DIR$/docs/ParamTag.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/external-String.html" afterPath="$PROJECT_DIR$/docs/external-String.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/global.html" afterPath="$PROJECT_DIR$/docs/global.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index.html" afterPath="$PROJECT_DIR$/docs/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/mixinObj.html" afterPath="$PROJECT_DIR$/docs/mixinObj.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/module-AMDModule.html" afterPath="$PROJECT_DIR$/docs/module-AMDModule.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/module-CommonJSModule.html" afterPath="$PROJECT_DIR$/docs/module-CommonJSModule.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/module-ESModule.html" afterPath="$PROJECT_DIR$/docs/module-ESModule.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/tutorial-tutorials-child-1.html" afterPath="$PROJECT_DIR$/docs/tutorial-tutorials-child-1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/tutorial-tutorials-child-2.html" afterPath="$PROJECT_DIR$/docs/tutorial-tutorials-child-2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/tutorial-tutorials-parent-1.html" afterPath="$PROJECT_DIR$/docs/tutorial-tutorials-parent-1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/tutorial-tutorials-parent-2.html" afterPath="$PROJECT_DIR$/docs/tutorial-tutorials-parent-2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/full/class-a.js" afterPath="$PROJECT_DIR$/full/class-a.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -224,8 +199,8 @@
       <file leaf-file-name="conf.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/conf.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+            <state relative-caret-position="430">
+              <caret line="50" column="14" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="54" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -244,11 +219,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/node_modules/htmlparser2/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="201">
               <caret line="70" column="7" lean-forward="false" selection-start-line="70" selection-start-column="3" selection-end-line="70" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -288,6 +273,7 @@
       <find>@example</find>
       <find>classdesc</find>
       <find>static</find>
+      <find>main</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -377,30 +363,6 @@
               <item name="studying" type="b2602c69:ProjectViewProjectNode" />
               <item name="studying" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="studying" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studying" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="studying" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studying" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="docdash" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="studying" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studying" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="htmlparser2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="studying" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studying" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="htmlparser2" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -422,8 +384,8 @@
       <recent name="$PROJECT_DIR$/tutorials" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/tutorials/assest" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/tutorials/assest" />
       <recent name="$PROJECT_DIR$/full" />
       <recent name="$PROJECT_DIR$/tutorials" />
       <recent name="$PROJECT_DIR$/tutorials-parent-2.md" />
@@ -460,17 +422,17 @@
       <workItem from="1508641869909" duration="15016000" />
       <workItem from="1508678644280" duration="25477000" />
       <workItem from="1508827823721" duration="9459000" />
-      <workItem from="1508848865228" duration="7548000" />
+      <workItem from="1508848865228" duration="7672000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80402000" />
+    <option name="totallyTimeSpent" value="80526000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -499,14 +461,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="27" column="3" lean-forward="false" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -804,18 +758,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/conf.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/htmlparser2/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
           <caret line="70" column="7" lean-forward="false" selection-start-line="70" selection-start-column="3" selection-end-line="70" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="50" column="14" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="54" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
