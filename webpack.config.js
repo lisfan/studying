@@ -8,18 +8,19 @@ const webpack = require('webpack')
 
 module.exports = {
   entry: {
-    index: './src/index.js',
+    index: './src/index.js'
   },
+
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/'
+    chunkFilename: '[name].bundle.js',
   },
   // devtool: 'inline-source-map',
-  devServer: {
-    contentBase: './dist',
-    // hot: true
-  },
+  // devServer: {
+  //   contentBase: './dist',
+  //   // hot: true
+  // },
   module: {
     rules: [
       {
@@ -46,10 +47,13 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'Output Management'
+      title: 'Code Splitting'
     }),
     new ManifestPlugin(),
     // new webpack.HotModuleReplacementPlugin(),
-    new UglifyJSPlugin()
+    new UglifyJSPlugin(),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'common' // 指定公共 bundle 的名称。
+    })
   ],
 };
