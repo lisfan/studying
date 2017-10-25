@@ -18,8 +18,8 @@
     "monospaceLinks": false,
     "default": {
       "useLongnameInNav": true,
-      "outputSourceFiles": false,
-      "includeDate": false,
+      "outputSourceFiles": true,
+      "includeDate": true,
       "staticFiles": {
         "include": [
           "./tutorials/assets"
@@ -39,12 +39,17 @@
       "property",
       "returns",
       "throws",
-      "todo"
+      "todo",
+      "example"
     ],
     "excludeTags": [
       "author",
       "classdesc",
       "see"
     ]
+  },
+  "docdash": {
+    "static": false,
+    "sort": false
   }
 }

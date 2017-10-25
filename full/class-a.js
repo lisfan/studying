@@ -125,8 +125,14 @@ export class ClassA {
    * @example
    * // how to use
    *
+   * - 觚地一苦
+   *
+   * 这是一个使用 `@example` 标记的示例
+   * @example
+   * ```js
    * const instance = new ClassA()
    * instance.exampleMethod()
+   * ```
    */
   exampleMethod() {
 
