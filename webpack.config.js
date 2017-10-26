@@ -8,15 +8,18 @@ const webpack = require('webpack')
 
 module.exports = {
   entry: {
-    index: './src/index.js'
+    index: './src/index.js',
+    app: './src/app.js',
   },
-
   output: {
-    filename: '[name].bundle.js',
+    filename: '[name]-numbers.js',
     path: path.resolve(__dirname, 'dist'),
     chunkFilename: '[name].bundle.js',
+    library: 'webpackNumbers',
+    libraryTarget: 'umd'
   },
-  // devtool: 'inline-source-map',
+  // externals: ['lodash', 'jquery'],
+  devtool: 'inline-source-map',
   // devServer: {
   //   contentBase: './dist',
   //   // hot: true
@@ -49,11 +52,14 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Code Splitting'
     }),
-    new ManifestPlugin(),
-    // new webpack.HotModuleReplacementPlugin(),
-    new UglifyJSPlugin(),
+    new webpack.ProvidePlugin({
+      _: 'lodash'
+    }),
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'common' // 指定公共 bundle 的名称。
+      name: 'runtime'
     })
+    // new ManifestPlugin(),
+    // new webpack.HotModuleReplacementPlugin(),
+    // new UglifyJSPlugin(),
   ],
 };

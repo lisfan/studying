@@ -1,21 +1,20 @@
-import { cube } from './math.js';
-import _ from 'lodash';
+import numRef from './ref.json';
+import myTest2 from '@xkeshi/my-test2'
 
-console.log('_', _)
-console.log('process.env.NODE_ENV', process.env.NODE_ENV)
-if (process.env.NODE_ENV === 'production') {
-  console.log('Looks like we are in development mode!');
-}
+console.log(myTest2.goo())
 
-function component() {
-  var element = document.createElement('pre');
+export function numToWord(num) {
+  return _.reduce(numRef, (accum, ref) => {
+    return ref.num === num ? ref.word : accum;
+  }, '');
+};
 
-  element.innerHTML = [
-    'Hello webpack!',
-    '1 cubed is equal to ' + cube(5)
-  ].join('\n\n');
+export function wordToNum(word) {
+  return _.reduce(numRef, (accum, ref) => {
+    return ref.word === word && word.toLowerCase() ? ref.num : accum;
+  }, -1);
+};
 
-  return element;
-}
+$.find('body')
 
-document.body.appendChild(component());
+console.log('good')
