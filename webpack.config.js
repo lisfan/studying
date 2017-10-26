@@ -5,11 +5,13 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 const webpack = require('webpack')
+console.log('NODE_ENV: ', process.env.NODE_ENV) // 'local'
+console.log('Production: ', process.env.production) // true
+console.log('xxxx: ', process.env.xxxx) // true
 
 module.exports = {
   entry: {
     index: './src/index.js',
-    app: './src/app.js',
   },
   output: {
     filename: '[name]-numbers.js',
@@ -19,32 +21,21 @@ module.exports = {
     libraryTarget: 'umd'
   },
   // externals: ['lodash', 'jquery'],
-  devtool: 'inline-source-map',
+  // devtool: 'inline-source-map',
   // devServer: {
   //   contentBase: './dist',
   //   // hot: true
   // },
+  resolve: {
+    extensions: [".tsx", ".ts", ".js"]
+  },
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ]
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/
       },
-      {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: [
-          'file-loader'
-        ]
-      },
-      {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: [
-          'file-loader'
-        ]
-      }
     ]
   },
   plugins: [
@@ -52,12 +43,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Code Splitting'
     }),
-    new webpack.ProvidePlugin({
-      _: 'lodash'
-    }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'runtime'
-    })
     // new ManifestPlugin(),
     // new webpack.HotModuleReplacementPlugin(),
     // new UglifyJSPlugin(),

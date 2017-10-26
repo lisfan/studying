@@ -1,0 +1,10 @@
+webpackJsonpwebpackNumbers([6],{
+
+/***/ 9:
+/***/ (function(module, exports) {
+
+module.exports = [{"num":1,"word":"One"},{"num":2,"word":"Two"},{"num":3,"word":"Three"},{"num":4,"word":"Four"},{"num":5,"word":"Five"},{"num":0,"word":"Zero"}]
+
+/***/ })
+
+});
