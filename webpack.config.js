@@ -12,9 +12,10 @@ console.log('xxxx: ', process.env.xxxx) // true
 module.exports = {
   entry: {
     index: './src/index.js',
+    vender: ['lodash'],
   },
   output: {
-    filename: '[name]-numbers.js',
+    filename: '[name].[hash].js',
     path: path.resolve(__dirname, 'dist'),
     chunkFilename: '[name].bundle.js',
     library: 'webpackNumbers',
@@ -57,8 +58,7 @@ module.exports = {
       title: 'Code Splitting'
     }),
     new webpack.optimize.CommonsChunkPlugin({
-      name: "manifest",
-      minChunks: Infinity
+      name: "vender",
     })
     // new ManifestPlugin(),
     // new webpack.HotModuleReplacementPlugin(),
