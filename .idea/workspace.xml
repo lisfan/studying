@@ -3,44 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="692bb090-eafb-446b-99d0-c48829743136" name="Default" comment="@">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf.json" afterPath="$PROJECT_DIR$/conf.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/ClassA.html" afterPath="$PROJECT_DIR$/docs/ClassA.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/ClassBExtendsClassA.html" afterPath="$PROJECT_DIR$/docs/ClassBExtendsClassA.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/ClassPrototypeA.html" afterPath="$PROJECT_DIR$/docs/ClassPrototypeA.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/Event.html" afterPath="$PROJECT_DIR$/docs/Event.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/ExternalString.html" afterPath="$PROJECT_DIR$/docs/ExternalString.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/Implements.html" afterPath="$PROJECT_DIR$/docs/Implements.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/Interface.html" afterPath="$PROJECT_DIR$/docs/Interface.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/NamespaceA.html" afterPath="$PROJECT_DIR$/docs/NamespaceA.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/NamespaceA_.html" afterPath="$PROJECT_DIR$/docs/NamespaceA_.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/ParamTag.html" afterPath="$PROJECT_DIR$/docs/ParamTag.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/amd-module.js.html" afterPath="$PROJECT_DIR$/docs/amd-module.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/class-a.js.html" afterPath="$PROJECT_DIR$/docs/class-a.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/class-b-extends-a.js.html" afterPath="$PROJECT_DIR$/docs/class-b-extends-a.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/class-prototype.js.html" afterPath="$PROJECT_DIR$/docs/class-prototype.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/commonjs-module.js.html" afterPath="$PROJECT_DIR$/docs/commonjs-module.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/enum.js.html" afterPath="$PROJECT_DIR$/docs/enum.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/es-module.js.html" afterPath="$PROJECT_DIR$/docs/es-module.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/event.js.html" afterPath="$PROJECT_DIR$/docs/event.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/external-String.html" afterPath="$PROJECT_DIR$/docs/external-String.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/externals-string.js.html" afterPath="$PROJECT_DIR$/docs/externals-string.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/global.html" afterPath="$PROJECT_DIR$/docs/global.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/global.js.html" afterPath="$PROJECT_DIR$/docs/global.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/implements.js.html" afterPath="$PROJECT_DIR$/docs/implements.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index.html" afterPath="$PROJECT_DIR$/docs/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/interface.js.html" afterPath="$PROJECT_DIR$/docs/interface.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/mixin-mixes.js.html" afterPath="$PROJECT_DIR$/docs/mixin-mixes.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/mixinObj.html" afterPath="$PROJECT_DIR$/docs/mixinObj.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/module-AMDModule.html" afterPath="$PROJECT_DIR$/docs/module-AMDModule.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/module-CommonJSModule.html" afterPath="$PROJECT_DIR$/docs/module-CommonJSModule.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/module-ESModule.html" afterPath="$PROJECT_DIR$/docs/module-ESModule.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/namespace-a-variation.js.html" afterPath="$PROJECT_DIR$/docs/namespace-a-variation.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/namespace-a.js.html" afterPath="$PROJECT_DIR$/docs/namespace-a.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/param-tag.js.html" afterPath="$PROJECT_DIR$/docs/param-tag.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/tutorial-tutorials-child-1.html" afterPath="$PROJECT_DIR$/docs/tutorial-tutorials-child-1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/tutorial-tutorials-child-2.html" afterPath="$PROJECT_DIR$/docs/tutorial-tutorials-child-2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/tutorial-tutorials-parent-1.html" afterPath="$PROJECT_DIR$/docs/tutorial-tutorials-parent-1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/tutorial-tutorials-parent-2.html" afterPath="$PROJECT_DIR$/docs/tutorial-tutorials-parent-2.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -64,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="43" column="5" lean-forward="false" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+            <state relative-caret-position="266">
+              <caret line="35" column="2" lean-forward="true" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -96,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="conf.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="conf.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/conf.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-389">
-              <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+            <state relative-caret-position="491">
+              <caret line="58" column="14" lean-forward="true" selection-start-line="58" selection-start-column="14" selection-end-line="58" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -469,13 +431,14 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81928000" />
+    <option name="totallyTimeSpent" value="82368000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -698,14 +661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="43" column="5" lean-forward="false" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-92">
@@ -862,8 +817,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/conf.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-389">
-          <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+        <state relative-caret-position="491">
+          <caret line="58" column="14" lean-forward="true" selection-start-line="58" selection-start-column="14" selection-end-line="58" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="35" column="2" lean-forward="true" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
           <folding />
         </state>
       </provider>
