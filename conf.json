@@ -5,7 +5,15 @@
     "encoding": "utf8",
     "tutorials": "./tutorials",
     "destination": "./docs",
-    "recurse": true
+    "recurse": true,
+    "verbose": true
+  },
+  "source": {
+    "include": [
+      "./src"
+    ],
+    "includePattern": ".+\\.js(doc)?$",
+    "excludePattern": "(^|\\/|\\\\)_"
   },
   "tags": {
     "allowUnknownTags": true,
