@@ -1,3 +1,1 @@
-import _ from 'lodash';
-
-console.log(_.join('msl', 'is', 'good', 'man', 'but'))
+console.log('__webpack_public_path__2', __webpack_public_path__)

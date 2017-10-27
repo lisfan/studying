@@ -18,7 +18,8 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     chunkFilename: '[name].bundle.js',
     library: 'webpackNumbers',
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
+    publicPath: '/studying/dist'
   },
   // externals: ['lodash', 'jquery'],
   // devtool: 'inline-source-map',
@@ -32,9 +33,21 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.png?$/,
+        use: {
+          loader: 'file-loader',
+        },
+      },
+      {
         test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/
+        use: {
+          loader: 'ts-loader',
+          options: {
+            happyPackMode: true,
+            transpileOnly: true
+          }
+        },
+        exclude: /node_modules/,
       },
     ]
   },
@@ -43,6 +56,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Code Splitting'
     }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: "manifest",
+      minChunks: Infinity
+    })
     // new ManifestPlugin(),
     // new webpack.HotModuleReplacementPlugin(),
     // new UglifyJSPlugin(),
