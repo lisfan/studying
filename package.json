@@ -5,7 +5,7 @@
   "main": "jsdoc.js",
   "scripts": {
     "start": "npm run build",
-    "build": "jsdoc -t node_modules/minami -c conf.json jsdoc.js",
+    "build": "jsdoc -c conf.json src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,6 +23,7 @@
     "tui-jsdoc-template": "^1.2.2"
   },
   "dependencies": {
-    "docdash": "^0.4.0"
+    "docdash": "^0.4.0",
+    "jsdoc": "^3.5.5"
   }
 }
