@@ -73,7 +73,7 @@ let property = {
 /**
  * See {@link ClassA} and [MyClass's foo property]{@link ClassA#publicMethod}.
  * Also, check out {@link http://www.google.com|Google} and
- * {@linklain https://github.com GitHub}.
+ * {@linkplain https://github.com GitHub}.
  */
 function seeMethod() {
 }
