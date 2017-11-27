@@ -7,7 +7,8 @@
     "start": "webpack --config webpack.config.js",
     "prod": "webpack --config webpack.prod.js",
     "dev": "webpack-dev-server --open --config webpack.config.js",
-    "server": "node server.js"
+    "server": "node server.js",
+    "mini": "uglifyjs src/uglify.js --config-file config/uglifyjs.json --output dist/uglify.min.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
     "image-loader": "0.0.1",
     "jquery": "3.2.1",
     "lodash": "^4.17.4",
+    "uglify-es": "3.1.10",
     "webpack": "3.8.1"
   },
   "devDependencies": {

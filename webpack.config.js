@@ -142,16 +142,7 @@ module.exports = function () {
         // {Boolean|Object}>}
         // warningsFilter() {
         // }, // 过滤uglify的警告，{Function(source) -> {Boolean}}
-        uglifyOptions: {
-          ie8: false,// false	Enable IE8 Support
-          ecma: undefined,// 	Supported ECMAScript Version (5, 6, 7 or 8). Affects parse, compress && output options
-          parse: {},//	Additional Parse Options
-          mangle: true, //	{Boolean|Object}	true	Enable Name Mangling (See Mangle Properties for advanced setups,
-                        // use with ⚠️)
-          output: {},//	{Object}	{}	Additional Output Options (The defaults are optimized for best compression)
-          compress: true,//	{Boolean|Object}	true	Additional Compress Options
-          warnings: false,//	{Boolean}	false	Display Warnings
-        }, // uglify配置项 - {Object}
+        uglifyOptions: {}, // uglify配置项 - {Object}
       })
     ]
   }
