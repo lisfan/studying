@@ -2,83 +2,322 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-
+const UglifyJSWebpackPlugin = require('uglifyjs-webpack-plugin');
+const CompressionPWebpacklugin = require("compression-webpack-plugin")
+const I18nWebpackPlugin = require("i18n-webpack-plugin")
+const NpmInstallPlugin = require('npm-install-webpack-plugin')
 const webpack = require('webpack')
+// const ZopfliWebpackPlugin = require("zopfli-webpack-plugin");
+const WebpackManifestPlugin = require("webpack-manifest-plugin");
+// const OfflinePlugin = require('offline-plugin');
+const WebpackSplitByPath = require("webpack-split-by-path");
+const CoreJsPlugin = require("core-js-webpack-plugin");
+const GeneratePackageJsonPlugin = require("generate-package-json-webpack-plugin");
+const DynamicCdnWebpackPlugin = require('dynamic-cdn-webpack-plugin');
+const WebpackPwaManifest = require('webpack-pwa-manifest')
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack-plugin');
+const ModuleMappingPlugin = require('module-mapping-webpack-plugin');
+const CircularDependencyPlugin = require('circular-dependency-plugin')
+const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+const { UnusedFilesWebpackPlugin } = require("unused-files-webpack-plugin")
+const WebpackBuildNotifierPlugin = require('webpack-build-notifier');
+const BundleDuplicatesPlugin = require("bundle-duplicates-plugin");
+const StatsPlugin = require('stats-webpack-plugin');
+const ShakePlugin = require('webpack-common-shake').Plugin;
+const WebpackMessages = require('webpack-messages');
+const Dotenv = require('dotenv-webpack');
+let FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+const WebpackCleanupPlugin = require('webpack-cleanup-plugin')
+const RawBundlerPlugin = require('webpack-raw-bundler');
+const SimpleProgressWebpackPlugin = require('simple-progress-webpack-plugin');
 
 module.exports = function () {
   return {
     context: path.resolve(__dirname, "src"),
     entry: {
-      index: path.resolve(__dirname, "src/index.js"),
+      app: path.resolve(__dirname, "src/entry-01.js"),
+      // vendor: ['jquery', 'lodash'],
+      // vendor: './path/to/vendor.js', // 所有需要单独打包的依赖放在这里
+      // common: './path/to/common', // 大的工具包，且更新少的，打包在一起
     },
     output: {
+      path: path.resolve(__dirname, 'dist'),
+      // filename: '[name].[chunkhash].js',
       filename: '[name].js',
       chunkFilename: '[chunkhash].js',
-      chunkLoadTimeout: 120000, // chunk 请求到期之前的毫秒数
-      hotUpdateChunkFilename: '[id].[hash].hot-update.js',
-      hotUpdateMainFilename: '[hash].hot-update.json',
-      // hotUpdateFunction:()=>{},
+      chunkLoadTimeout: 120 * 1000, // chunk 请求到期之前的毫秒数
       pathinfo: true,
-      // publicPath: "/assets/",
-      path: path.resolve(__dirname, 'dist'),
-      devtoolModuleFilenameTemplate: 'webpack:///[absolute-resource-path]?[all-loaders]',
-      devtoolFallbackModuleFilenameTemplate: 'webpack:///[absolute-resource-path].[id]?[all-loaders]',
+      publicPath: "./dist/",
+      // libraryTarget: 'umd',
+      // library: 'good',
+      // libraryExport: '',
+      auxiliaryComment: 'module comment',
+      umdNamedDefine: true,
       sourcePrefix: '\t',
       sourceMapFilename: '[file].map',
       strictModuleExceptionHandling: false,
-      libraryTarget: 'umd',
-      library: 'good',
-      libraryExport: '',
-      auxiliaryComment: 'module comment',
-      umdNamedDefine: true,
+      devtoolModuleFilenameTemplate: 'webpack:///[absolute-resource-path]?[all-loaders]',
+      devtoolFallbackModuleFilenameTemplate: 'webpack:///[absolute-resource-path].[id]?[all-loaders]',
+      hotUpdateChunkFilename: '[id].[hash].hot-update.js',
+      hotUpdateMainFilename: '[hash].hot-update.json',
+      // hotUpdateFunction:()=>{},
     },
-    module: {
-      noParse: /jquery|lodash/,
-      rules: [
-        {
-          test: /\.(png|svg|jpg|gif)$/,
-          use: [
-            'file-loader'
-          ]
-        }
-      ]
+    // devtool: 'cheap-module-eval-source-map', // 开发环境
+    // devtool: 'nosources-source-map', // 生产环境
+    // devtool: 'source-map', // 生产环境
+    // stats: 'verbose',
+    target: 'web',
+    externals: {
+      $: 'jquery',
     },
+    // performance: {
+    //   hints: 'error',
+    //   maxEntrypointSize: 25 * 1024,
+    //   maxAssetSize: 25 * 1024,
+    //   // assetFilter: () => {
+    //   // }
+    // },
     resolve: {
-      alias: {},
+      extensions: [".js", ".json"],
+      alias: {
+        // lodash: path.resolve(__dirname, 'node_modules/lodash'),
+      },
+      enforceExtension: false,
+      symlinks: true,
+      mainFields: ["browser", "module", "main"],
       aliasFields: ['browser'],
       unsafeCache: true,
       cacheWithContext: true,
       descriptionFiles: ["package.json"],
-      enforceExtension: false,
       enforceModuleExtension: false,
-      extensions: [".js", ".json"],
-      mainFields: ["browser", "module", "main"],
-      modules: ["node_modules"],
+      modules: [path.resolve(__dirname, 'node_modules')], // 限制查找范围，不向上查找
       plugins: [],
-      symlinks: true,
       // cachePredicate:()=>{}
     },
     resolveLoader: {
       // moduleExtensions: ['-loader']
     },
-    // devtool: 'cheap-module-eval-source-map', // 开发环境
-    // devtool: 'nosources-source-map', // 生产环境
-    // target: 'web',
-    // watch:false,
-    // watchOptions: {
-    //   aggregateTimeout: 300,
-    //   poll: 1000,
-    //   ignore:'',
-    // },
-    // externals:{},
-    // performance: {
-    // hints: 'error',
-    // maxEntrypointSize: 250000,
-    // maxAssetSize: 250000,
-    // assetFilter:()=>{}
-    // },
-    // stats: 'verbose',
+    module: {
+      // noParse: /jquery|lodash/,
+      rules: [
+        // {
+        //   test: /\.(png|svg|jpg|gif)$/,
+        //   use: [{
+        //     loader: 'file-loader',
+        //   }]
+        // },
+        {
+          test: path.join(__dirname, './src/answer.js'),
+          use: [
+            {
+              loader: 'val-loader'
+            }
+          ]
+        },
+        {
+          test: /\.env/,
+          use: [
+            {
+              loader: 'raw-loader'
+            }
+          ]
+        },
+        {
+          test: /\.(jpe?g|png|gif|svg)$/i,
+          use: [
+            {
+              loader: 'url-loader',
+              options: {
+                // mimetype: '', // 指定mime类型，默认根据文件后缀名 - {string}
+                limit: 20 * 1024, // 限制小于该值的文件才进行转换，字节单位 - {?number : undefined}
+                fallback: 'file-loader', // 当大于limit设置的值时，回滚采用的loader - {string : 'file-loader'}
+              }
+            },
+            {
+              loader: 'img-loader',
+              options: {
+                enabled: true, // 是否启用图片压缩 - {boolean : false}
+                optipng: false, // 是否启用optipng压缩算法
+                gifsicle: { // - 是否启用gif压缩 - {?object : {}}
+                  interlaced: false, // 是否启用交错渲染 - {boolean : false}
+                  optimizationLevel: 1, // 优化级别，1-3级别范围，级别越高，消耗时间越长，优化更好 - {number : 1}
+                  // colors: 2, // 色彩范围 - 必须是2-255的范围
+                },
+                mozjpeg: { // - 是否启用jpg压缩 - {?object : {}}
+                  quality:90, // 压缩质量，0-100的范围，数值越高，质量越好 - {number : 100}
+                  progressive: true, // 是否启用渐进加载 - {boolean : true}
+
+                  targa: false, // 导入的文件是 targa 格式
+                  revert: false, // 恢复标准配置代替mozjpeg配置
+                  fastcrush: false, // 是否启用渐进进扫描优化
+                  dcScanOpt: 1, // 设置DC扫描优化
+                  notrellis: false, // 是否启用trellis优化
+                  notrellisDC: false, // Disable trellis optimization of DC coefficients.
+                  tune: 'hvs-psnr', // 设置 trellis 优化算法
+                  noovershoot: false, // Disable black-on-white deringing via overshoot.
+                  arithmetic: false, // Use arithmetic coding.
+                  quantTable: false, // Use predefined quantization table.
+                  smooth: number, // Set the strength of smooth dithered input. (1...100)
+                  maxmemory: number, // Set the maximum memory to use in kbytes.
+                },
+                pngquant: { // - 是否启用png压缩 - {?object : {}}
+                  floyd: 0.5,
+                  speed: 2
+                },
+                svgo: { // - 是否启用svg压缩 - {?object : {}}
+                  plugins: [
+                    { removeTitle: true },
+                    { convertPathData: false }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+        //       loaders: [{
+        //   test: /\.js$/,
+        //   loader: 'babel-loader?cacheDirectory',
+        // }]
+      ]
+    },
+    plugins: [
+
+      // new WebpackMessages({
+      //   name: 'client',
+      //   logger: str => console.log(`>> ${str}`)
+      // }),
+      new WebpackCleanupPlugin(),
+      new SimpleProgressWebpackPlugin({
+        format: 'compact'
+      }),
+      // 将所有的node_module依赖打包在一起
+      // 提供配置项，可以将指定的node_module打包
+      new webpack.optimize.CommonsChunkPlugin({
+        name: 'vendor',
+        minChunks: (module, count) => {
+          const nodeModulePath = path.resolve(__dirname, "node_modules")
+          return module.resource && module.resource.indexOf(nodeModulePath) >= 0 && count >= 1
+        }
+      }),
+      // 将项目中很少用，但不怎么更新的工具模块打包在一起
+      // 项目中通过common.js引入，并在配置的entry入口中指向该文件
+      new webpack.optimize.CommonsChunkPlugin({
+        name: 'common',
+        minChunks: 2
+      }),
+      // 将runtime提取出来，并通过`webpack-raw-bundler`插件与app.js进行合并
+      new webpack.optimize.CommonsChunkPlugin({
+        name: 'runtime',
+      }),
+
+      // new webpack.optimize.AggressiveSplittingPlugin(),
+      // new webpack.BannerPlugin({
+      //   banner: "publish@" + new Date().toLocaleString(),
+      //   entryOnly: true,
+      // }),
+      // new ShakePlugin(),
+      // new UglifyJSWebpackPlugin({
+      //   uglifyOptions: {
+      //     output: {
+      //       beautify: true
+      //     }
+      //   }, // uglify配置项 - {Object}
+      // }),
+      new RawBundlerPlugin({
+        excludedFilenames: [/angulartics/], // 排除目录或文件 - {string[]}
+        readEncoding: "utf-8", // nodejs读取编码格式 - {string : 'utf-8'}
+        includeFilePathComments: true, // 合并文件时，包含合并的文件路径 - {boolean : false}
+        allowDuplicatesInBundle: false, // 允许重复模块打包  - {boolean : false}
+        printProgress: true, // 打印合并的日志  - {boolean : false}
+        fileEnding: "\n\n", // 合并文件时，文件末尾附加字符  - {string : '\n\n'}
+        commentTags: { // 路径注释格式 - {object}
+          Start: "/* ",
+          End: " */"
+        },
+        // bundles: [ // 合并的文件列表 - {string[]}
+        //   "vendor.js",
+        //   "styles.css",
+        //   "vendor.lib.js"
+        // ],
+        // "vendor.js": [ // 被合并的文件的组合方式
+        //   'js/*.js'
+        // ],
+        // "vendor.lib.js": [{ // 支持匹配
+        //   path: "../build/*.js",
+        //   match: /vendor/
+        // }],
+        // "styles.css": [
+        //   'css/bootstrap.css',
+        //   'css/edits.css'
+        // ],
+        bundles: ["xxx.js"],
+        "xxx.js": [path.join(__dirname, './dist/app.js'), path.join(__dirname, './dist/runtime.js')],
+      }),
+      new webpack.DefinePlugin({
+        VERSION: JSON.stringify(true),
+        PRODUCTION: JSON.stringify(true),
+        TEST: JSON.stringify(true),
+        DEVELOPMENT: JSON.stringify(true),
+      }),
+      // new webpack.ProvidePlugin({
+      //   _: 'lodash',
+      //   lodash: 'lodash',
+      //   isNumber: ['lodash', 'isNumber'],
+      //   // ...
+      // }),
+      // new webpack.NamedModulesPlugin(),
+      // new webpack.HashedModuleIdsPlugin(),
+      new NpmInstallPlugin(),
+
+      // new CompressionWebpackPlugin({
+      //   threshold: 20 * 1024, // 只处理比这个值大的资源 - {number : 0}
+      //   minRatio: 0.8, // 只有压缩率比这个值小的资源才会被处理，只处理比这个值大的资源 - {number : 0.8}
+      //   deleteOriginalAssets: true, // 是否删除源资源 - {boolean : false}
+      // }),
+      // new BundleAnalyzerPlugin()
+      // new DuplicatePackageCheckerPlugin(),
+      new CircularDependencyPlugin({
+        failOnError: true, // 使用抛出错误来代替警告 - {boolean : false}
+      }),
+      new CaseSensitivePathsPlugin(),
+      // new FriendlyErrorsWebpackPlugin()
+      // new UnusedFilesWebpackPlugin(),
+      new WebpackBuildNotifierPlugin({
+        title: "Webpack Build", // 通知标题 - {string : 'Webpack Build'}
+        logo: path.resolve("./src/assest/image/logo.png"), // 通知logo
+        sound: 'Submarine', // 通知音效，可选值有：Basso, Blow, Bottle, Frog, Funk, Glass, Hero,
+        // Morse, Ping, Pop, Purr, Sosumi, Submarine -
+        // {boolean|string : 'Submarine'}
+        successSound: true, // 是否启用成功音效通知
+        warningSound: true, // 是否启用警告音效通知
+        failureSound: true, // 是否启用失败音效通知
+        suppressSuccess: false, // 是否阻止成功通知
+        suppressWarning: false, // 是否阻止警告通知
+        suppressCompileStart: false,
+        activateTerminalOnError: true,
+        // successIcon: './icons/success.png', // 编译中图标 - {string : './icons/success.png'}
+        // warningIcon: './icons/warning.png', // 编译中图标 - {string : './icons/warning.png'}
+        // failureIcon: './icons/failure.png', // 编译中图标 - {string : './icons/failure.png'}
+        // compileIcon: './icons/compile.png', // 编译中图标 - {string : './icons/compile.png'}
+        // messageFormatter: '', // 通知信息格式化
+        // onClick: '', // 通知框点击事件，默认打开终端
+      }),
+      // new StatsPlugin('stats.json', {
+      //   chunkModules: true,
+      //   exclude: [/node_modules/]
+      // }),
+      // new BundleDuplicatesPlugin({}),
+      new Dotenv({
+        safe: true,
+        systemvars: true, // 载入所有系统预定义的变量 - {boolean : false}
+        silent: false // 静默模式，忽略错误 - {boolean : false}
+      }),
+      new HtmlWebpackPlugin(),
+      // new FaviconsWebpackPlugin('./logo.png')
+
+    ],
     // node: {},
     // amd:{},
     // bail:false,
@@ -88,6 +327,12 @@ module.exports = function () {
     // recordsPath: path.join(__dirname, './reports/webpack-bundle.json'),
     // recordsOutputPath: path.join(__dirname, 'records.json'),
     // recordsInputPath: path.join(__dirname, 'records.json'),
+    watch: false,
+    watchOptions: {
+      aggregateTimeout: 300,
+      poll: 1000,
+      ignore: '',
+    },
     devServer: {
       // host: 'localhost',
       useLocalIp: true,
@@ -118,32 +363,5 @@ module.exports = function () {
       // headers: {},
       // public: '',
     },
-    plugins: [
-      new CleanWebpackPlugin([
-        'dist', // 清空的目录，基于当前工作目录解析
-      ], {
-        // root: __dirname, // 当前解析的根目录，默认基于当前根目录
-        // verbose: true, // 是否输出冗长的日志信息
-        // dry: false, // 启用模拟模式
-        // watch: false, // 重新编译时先移除
-        // exclude: ['files', 'to', 'ignore'], // 排除这些文件的过滤
-        // allowExternal: false // 允许清空webpack root外的内容
-      }),
-      new webpack.optimize.AggressiveSplittingPlugin(),
-      new UglifyJSPlugin({
-        // test: /.js($|\?)/i, // 只处理匹配的文件格式 - {RegExp | Array<RegExp>}
-        // include: undefined, // 包括的文件 {RegExp | Array<RegExp>}
-        // exclude: undefined, // 要过滤的文件 {RegExp | Array<RegExp>}
-        cache: true, // 启用缓存，或者并设置缓存目录，默认缓存目录为`node_modules/.cache/uglifyjs-webpack-plugin` - {Boolean | String}
-        parallel: true, // 使用多进程并行运行和文件缓存来提高构建速度。(建议启用)启用并行优化，也可以指定值并行数量，默认值为`os.cpus().length - 1` - {Boolean | //
-                        // number}
-        sourceMap: true, // 启用sourceMap - {Boolean}
-        // extractComments: false, // 所有的代码注释都会输出到单独的文件，可以进行深度配置 - {Boolean|RegExp|Function<(node, comment) -> //
-        // {Boolean|Object}>}
-        // warningsFilter() {
-        // }, // 过滤uglify的警告，{Function(source) -> {Boolean}}
-        uglifyOptions: {}, // uglify配置项 - {Object}
-      })
-    ]
   }
 }
