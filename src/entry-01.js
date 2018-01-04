@@ -1,7 +1,3 @@
-import LOGO from './assest/image/logo.png'
-import PACKAGE from '../package.json'
-import ENV from '../.env'
+import A from './a.css'
 
-console.log('LOGO', LOGO)
-console.log('PACKAGE', PACKAGE)
-console.log('ENV', ENV)
+console.log('A', A.use())

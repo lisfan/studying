@@ -102,78 +102,52 @@ module.exports = function () {
     module: {
       // noParse: /jquery|lodash/,
       rules: [
+        {
+          test: /\.(png|svg|jpg|gif)$/,
+          use: [{
+            loader: 'url-loader',
+          }]
+        },
         // {
         //   test: /\.(png|svg|jpg|gif)$/,
         //   use: [{
         //     loader: 'file-loader',
         //   }]
         // },
+        // {
+        //   test: path.join(__dirname, './src/answer.js'),
+        //   use: [
+        //     {
+        //       loader: 'val-loader'
+        //     }
+        //   ]
+        // },
+        // {
+        //   test: /\.env/,
+        //   use: [
+        //     {
+        //       loader: 'raw-loader'
+        //     }
+        //   ]
+        // },
         {
-          test: path.join(__dirname, './src/answer.js'),
+          test: /\.css$/,
           use: [
             {
-              loader: 'val-loader'
-            }
-          ]
-        },
-        {
-          test: /\.env/,
-          use: [
-            {
-              loader: 'raw-loader'
-            }
-          ]
-        },
-        {
-          test: /\.(jpe?g|png|gif|svg)$/i,
-          use: [
-            {
-              loader: 'url-loader',
+              loader: "style-loader/useable",
               options: {
-                // mimetype: '', // 指定mime类型，默认根据文件后缀名 - {string}
-                limit: 20 * 1024, // 限制小于该值的文件才进行转换，字节单位 - {?number : undefined}
-                fallback: 'file-loader', // 当大于limit设置的值时，回滚采用的loader - {string : 'file-loader'}
+                hmr: true, // 是否启用热加载 - {boolean}
+                base: true, // 设置模块ID，用于DllPlugin的使用 - {number|boolean}
+                attrs: {}, // 增加属性到style标签 - {object}
+                transform: false, // 转换条件 - {function|boolean}
+                insertAt: 'bottom', // 插入style标签的位置
+                insertInto: 'head', // 插入style标签的到某标签里
+                singleton: undefined, // 重用标签
+                sourceMap: false, // 启用sourcemap
+                convertToAbsoluteUrls: false, // 当sourcemap启用时，转换相对地址为为绝对地址
               }
             },
-            {
-              loader: 'img-loader',
-              options: {
-                enabled: true, // 是否启用图片压缩 - {boolean : false}
-                optipng: false, // 是否启用optipng压缩算法
-                gifsicle: { // - 是否启用gif压缩 - {?object : {}}
-                  interlaced: false, // 是否启用交错渲染 - {boolean : false}
-                  optimizationLevel: 1, // 优化级别，1-3级别范围，级别越高，消耗时间越长，优化更好 - {number : 1}
-                  // colors: 2, // 色彩范围 - 必须是2-255的范围
-                },
-                mozjpeg: { // - 是否启用jpg压缩 - {?object : {}}
-                  quality:90, // 压缩质量，0-100的范围，数值越高，质量越好 - {number : 100}
-                  progressive: true, // 是否启用渐进加载 - {boolean : true}
-
-                  targa: false, // 导入的文件是 targa 格式
-                  revert: false, // 恢复标准配置代替mozjpeg配置
-                  fastcrush: false, // 是否启用渐进进扫描优化
-                  dcScanOpt: 1, // 设置DC扫描优化
-                  notrellis: false, // 是否启用trellis优化
-                  notrellisDC: false, // Disable trellis optimization of DC coefficients.
-                  tune: 'hvs-psnr', // 设置 trellis 优化算法
-                  noovershoot: false, // Disable black-on-white deringing via overshoot.
-                  arithmetic: false, // Use arithmetic coding.
-                  quantTable: false, // Use predefined quantization table.
-                  smooth: number, // Set the strength of smooth dithered input. (1...100)
-                  maxmemory: number, // Set the maximum memory to use in kbytes.
-                },
-                pngquant: { // - 是否启用png压缩 - {?object : {}}
-                  floyd: 0.5,
-                  speed: 2
-                },
-                svgo: { // - 是否启用svg压缩 - {?object : {}}
-                  plugins: [
-                    { removeTitle: true },
-                    { convertPathData: false }
-                  ]
-                }
-              }
-            }
+            "css-loader"
           ]
         }
         //       loaders: [{
